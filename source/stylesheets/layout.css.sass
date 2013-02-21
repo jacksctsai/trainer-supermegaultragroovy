@@ -1,158 +1,219 @@
+@import compass
 @import compass/reset
 @import compass/css3
 
-body
-  background-image: url(/img/body-bg.png)
-  color: #abb1b6
+$default-color : #abb1b6
+$default-font: Verdana, Arial, Helvetica, sans-serif
 
-a
-  text-decoration: none
+body
+  background: url( "/img/body-bg.png" ) repeat
 
 #wrap
-  background-image: url(/img/page-bg.png)
+  background: url( "/img/page-bg.png" ) repeat
   margin: 0 auto
   width: 978px
 
+#logo
+  +hide-text
+  background: url( "/img/logo.png" ) no-repeat
+  display: block
+  width: 194px
+  height: 71px
+  overflow: hidden
+
 #content-background
-  background-image: url(/img/background-top.jpg)
-  background-repeat: no-repeat
+  background: url(/img/background-top.jpg) no-repeat
 
 #content
   padding: 0 40px
 
 #content-heading
-  margin: 50px 0 0 0
+  padding: 50px 0 0
 
 #content-heading-left
-  display: inline-block
+  float: left
+  overflow: hidden
   width: 360px
 
 #content-heading-right
-  display: inline-block
-  width: 450px
+  float: right
+  width: 530px
 
-.content-h1
+#slogan
+  color: $default-color
   font-size: 30px
   line-height: 1em
 
-.content-h2
-  font-size: 11px
-  line-height: 16px
-  margin: 30px 0
+#subtitle
+  color: $default_color
+  font-size: 13px
+  line-height: 20px
+  padding: 30px 0
 
-#content-heading-right-msg-block
+#link-watch-video
+  +hide-text
+  +inline-block
+  background: url( "/img/watch.png" ) no-repeat
+  padding: 0 0 0 2px
+  height: 16px
+  overflow: hidden
+  position: relative
+  bottom: 2px
+  width: 96px
+
+#link-download
+  +hide-text
+  background: url( "/img/download.png" ) no-repeat
+  display: block
+  width: 190px
+  height: 59px
+  overflow: hidden
+  float: left
+
+#link-buy
+  +hide-text
+  background: url( "/img/buy.png" ) no-repeat
+  display: block
+  width: 160px
+  height: 59px
+  overflow: hidden
+  float: right
+
+#previous-version-msg-block
+  padding: 0 0 10px 135px
+
+#previous-version-msg
   +single-box-shadow
-  background-image: url(/img/note-bg.png)
-  /* border: 2px solid #2A343F */
-  font-family: Verdana, Arial, Helvetica, sans-serif
+  color: $default-color
+  background: url(/img/note-bg.png) repeat
+  font-family: $default-font
   font-size: 12px
-  height: 30px
-  line-height: 15px
-  margin: 70px 0 10px 135px
+  height: 35px
+  line-height: 17px
   padding: 10px 13px
   width: 365px
+
+#link-download-capo-1-1
+  border-bottom: 1px solid $default-color
+  color: inherit
+  font-family: inherit
+  font-size: inherit
+  line-height: inherit
+  padding: 0 0 1px
+  text-decoration: none
 
 #content-heading-right-msg-block strong
   font-weight: bold
 
-#content-heading-right-sample-img
-  margin: 0 30px
+#capo-sample-image
+  padding: 0 30px
 
 #content-heading-deco
-  margin: 80px 0 30px 0
+  clear: both
+  padding: 80px 0 60px
+
+#content-heading-divider
+  +inline-block
+  width: 15px
 
 #content-heading-deco-left
-  display: inline-block
+  +inline-block
+  background: url( "/img/features-top-line.png" ) no-repeat
+  height: 3px
+  position: relative
+  top: 2px
+  width: 311px
 
-#content-heading-deco-left img
-  vertical-align: middle
+#topic
+  +inline-block
+  padding: 0 15px
 
-#content-heading-deco-middle
-  display: inline-block
-  margin: 0 5px
-
-#content-heading-deco-features
+#topic-features
+  +inline-block
+  color: $default-color
   border-bottom: 1px solid #abb1b6
-  display: inline-block
-  font-family: Verdana, Arial, Helvetica, sans-serif
+  font-family: $default-font
   font-size: 25px
   text-align: center
   line-height: 20px
-  margin: 0 7px
-  padding: 0 0 4px 0
+  padding: 0 0 4px
 
-#content-heading-deco-features span
-  vertical-align: middle
-
-#content-heading-deco-tutorials
-  color: #414A53
-  display: inline-block
-  font-family: Verdana, Arial, Helvetica, sans-serif
+#topic-tutorials
+  +inline-block
+  color: #414a53
+  font-family: $default-font
   font-size: 25px
   text-align: center
-  margin: 0 7px
-
-#content-heading-deco-tutorials
-  vertical-align: middle
+  line-height: 20px
+  padding: 0 0 4px
 
 #content-heading-deco-right
-  display: inline-block
-
-#content-heading-deco-right img
-  vertical-align: middle
+  +inline-block
+  background: url( "/img/features-top-line.png" ) no-repeat
+  height: 3px
+  position: relative
+  top: 2px
+  width: 311px
 
 .content-column
   display: inline-block
   width: 420px
 
 #content-right-column
-  margin: 0 0 0 50px
+  padding: 0 0 0 50px
 
-.content-item
+.feature-item
   height: 120px
   width: 430px
 
-.content-item-icon
+.feature-item-icon
   display: inline-block
   padding: 3px 5px 0 0
   vertical-align: top
   width: 60px
 
-.content-item-body
+.feature-item-body
   display: inline-block
-  margin: 0 0 0 5px
+  padding: 0 0 0 5px
   width: 340px
 
-.content-item-header
-  font-family: Verdana, Arial, Helvetica, sans-serif
+.feature-item-header
+  color: $default-color
+  font-family: $default-font
   font-size: 13px
-  padding: 0 0 10px 0
+  padding: 0 0 10px
 
-.content-item-description
-  font-family: Verdana, Arial, Helvetica, sans-serif
+.feature-item-description
+  color: $default-color
+  font-family: $default-font
   font-size: 12px
   line-height: 16px
 
-#footer
-  padding: 0 0 70px 0
-
-#footer-divider
-  width: 900px
-  border: 1px groove #252B33
+#related-links
+  padding: 0 0 70px
 
 #footer-logo
-  margin: 60px auto 10px auto
+  border-top: 1px groove #252B33
+  padding: 60px 0 10px
+
+#logo-super-mega-ultra-groovy
+  +hide-text
+  background: url( "/img/sublogo.png" ) no-repeat
+  display: block
+  height: 51px
+  overflow: hidden
   width: 180px
+  margin: 0 auto
 
 #footer-anchors
   color: #2F4453
-  font-family: Verdana, Arial, Helvetica, sans-serif
+  font-family: $default-font
   font-size: 13px
   text-align: center
 
 #footer-anchors a
   color: #36424B
   border-bottom: 1px solid #36424B
-  font-family: Verdana, Arial, Helvetica, sans-serif
-  padding: 0 0 2px 0
+  font-family: $default-font
+  padding: 0 0 2px
 
