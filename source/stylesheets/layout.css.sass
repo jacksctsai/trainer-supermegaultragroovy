@@ -6,10 +6,10 @@ $default-color : #abb1b6
 $default-font: Verdana, Arial, Helvetica, sans-serif
 
 body
-  background: url( "/img/body-bg.png" ) repeat
+  background: url( "/img/body-bg.png" )
 
 #wrap
-  background: url( "/img/page-bg.png" ) repeat
+  background: url( "/img/page-bg.png" )
   margin: 0 auto
   width: 978px
 
@@ -19,10 +19,9 @@ body
   display: block
   width: 194px
   height: 71px
-  overflow: hidden
 
 #content-background
-  background: url(/img/background-top.jpg) no-repeat
+  background: url( "/img/background-top.jpg" ) no-repeat
 
 #content
   padding: 0 40px
@@ -30,17 +29,21 @@ body
 #content-heading
   padding: 50px 0 0
 
+#content-heading-left-button-group
+  +clearfix
+
 #content-heading-left
-  float: left
-  overflow: hidden
+  +clearfix
+  +float-left
   width: 360px
 
 #content-heading-right
-  float: right
+  +float-right
   width: 530px
 
 #slogan
   color: $default-color
+  font-family: $default-font
   font-size: 30px
   line-height: 1em
 
@@ -56,36 +59,34 @@ body
   background: url( "/img/watch.png" ) no-repeat
   padding: 0 0 0 2px
   height: 16px
-  overflow: hidden
   position: relative
   bottom: 2px
   width: 96px
 
 #link-download
+  +float-left
   +hide-text
   background: url( "/img/download.png" ) no-repeat
   display: block
   width: 190px
   height: 59px
-  overflow: hidden
-  float: left
 
 #link-buy
+  +float-right
   +hide-text
   background: url( "/img/buy.png" ) no-repeat
   display: block
   width: 160px
   height: 59px
-  overflow: hidden
-  float: right
 
 #previous-version-msg-block
   padding: 0 0 10px 135px
 
 #previous-version-msg
   +single-box-shadow
+  border-radius: 4px
   color: $default-color
-  background: url(/img/note-bg.png) repeat
+  background: url(/img/note-bg.png)
   font-family: $default-font
   font-size: 12px
   height: 35px
@@ -106,32 +107,27 @@ body
   font-weight: bold
 
 #capo-sample-image
+  display: block
   padding: 0 30px
 
 #content-heading-deco
+  background: url( "/img/feature-divider.png" )
   clear: both
-  padding: 80px 0 60px
+  padding: 20px 0 20px
 
-#content-heading-divider
-  +inline-block
-  width: 15px
-
-#content-heading-deco-left
-  +inline-block
-  background: url( "/img/features-top-line.png" ) no-repeat
-  height: 3px
-  position: relative
-  top: 2px
-  width: 311px
+#content-heading-deco-wrap
+  background: url( "/img/page-bg-texture.png" )
+  margin: 0 auto
+  width: 265px
 
 #topic
   +inline-block
   padding: 0 15px
 
 #topic-features
-  +inline-block
   color: $default-color
   border-bottom: 1px solid #abb1b6
+  float: left
   font-family: $default-font
   font-size: 25px
   text-align: center
@@ -139,24 +135,19 @@ body
   padding: 0 0 4px
 
 #topic-tutorials
-  +inline-block
   color: #414a53
+  float: right
   font-family: $default-font
   font-size: 25px
   text-align: center
   line-height: 20px
-  padding: 0 0 4px
+  padding: 0 0 4px 15px
 
-#content-heading-deco-right
-  +inline-block
-  background: url( "/img/features-top-line.png" ) no-repeat
-  height: 3px
-  position: relative
-  top: 2px
-  width: 311px
+#content-body
+  +clearfix
 
 .content-column
-  display: inline-block
+  float: left
   width: 420px
 
 #content-right-column
@@ -167,13 +158,13 @@ body
   width: 430px
 
 .feature-item-icon
-  display: inline-block
-  padding: 3px 5px 0 0
+  float: left
+  padding: 3px 10px 0 0
   vertical-align: top
   width: 60px
 
 .feature-item-body
-  display: inline-block
+  float: left
   padding: 0 0 0 5px
   width: 340px
 
@@ -189,7 +180,7 @@ body
   font-size: 12px
   line-height: 16px
 
-#related-links
+#footer
   padding: 0 0 70px
 
 #footer-logo
@@ -201,17 +192,16 @@ body
   background: url( "/img/sublogo.png" ) no-repeat
   display: block
   height: 51px
-  overflow: hidden
   width: 180px
   margin: 0 auto
 
-#footer-anchors
+#related-links
   color: #2F4453
   font-family: $default-font
   font-size: 13px
   text-align: center
 
-#footer-anchors a
+#related-links a
   color: #36424B
   border-bottom: 1px solid #36424B
   font-family: $default-font
