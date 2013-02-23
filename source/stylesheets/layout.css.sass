@@ -82,24 +82,24 @@ body
 #previous-version-msg-block
   padding: 0 0 10px 135px
 
-#previous-version-msg
-  +single-box-shadow
-  border-radius: 4px
+@mixin previous-version-msg-common-style
   color: $default-color
-  background: url(/img/note-bg.png)
   font-family: $default-font
   font-size: 12px
-  height: 35px
   line-height: 17px
+
+#previous-version-msg
+  +previous-version-msg-common-style
+  +single-box-shadow
+  border-radius: 4px
+  background: url(/img/note-bg.png)
+  height: 35px
   padding: 10px 13px
   width: 365px
 
 #link-download-capo-1-1
+  +previous-version-msg-common-style
   border-bottom: 1px solid $default-color
-  color: inherit
-  font-family: inherit
-  font-size: inherit
-  line-height: inherit
   padding: 0 0 1px
   text-decoration: none
 
@@ -110,12 +110,12 @@ body
   display: block
   padding: 0 30px
 
-#content-heading-deco
+#content-nav-deco
   background: url( "/img/feature-divider.png" )
   clear: both
   padding: 20px 0 20px
 
-#content-heading-deco-wrap
+#content-nav-deco-wrap
   background: url( "/img/page-bg-texture.png" )
   margin: 0 auto
   width: 265px
@@ -125,9 +125,9 @@ body
   padding: 0 15px
 
 #topic-features
+  +float-left
   color: $default-color
   border-bottom: 1px solid #abb1b6
-  float: left
   font-family: $default-font
   font-size: 25px
   text-align: center
@@ -135,8 +135,8 @@ body
   padding: 0 0 4px
 
 #topic-tutorials
+  +float-right
   color: #414a53
-  float: right
   font-family: $default-font
   font-size: 25px
   text-align: center
@@ -147,7 +147,7 @@ body
   +clearfix
 
 .content-column
-  float: left
+  +float-left
   width: 420px
 
 #content-right-column
@@ -158,13 +158,13 @@ body
   width: 430px
 
 .feature-item-icon
-  float: left
+  +float-left
   padding: 3px 10px 0 0
   vertical-align: top
   width: 60px
 
 .feature-item-body
-  float: left
+  +float-left
   padding: 0 0 0 5px
   width: 340px
 
@@ -184,7 +184,7 @@ body
   padding: 0 0 70px
 
 #footer-logo
-  border-top: 1px groove #252B33
+  border-top: 1px groove #252b33
   padding: 60px 0 10px
 
 #logo-super-mega-ultra-groovy
@@ -196,14 +196,16 @@ body
   margin: 0 auto
 
 #related-links
-  color: #2F4453
+  color: #2f4453
   font-family: $default-font
   font-size: 13px
   text-align: center
+  text-decoration: none
 
 #related-links a
-  color: #36424B
-  border-bottom: 1px solid #36424B
+  color: #36424b
+  border-bottom: 1px solid #36424b
   font-family: $default-font
   padding: 0 0 2px
+  text-decoration: none
 
